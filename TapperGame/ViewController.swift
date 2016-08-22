@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tapBtn: UIButton!
     @IBOutlet weak var tapsLbl: UILabel!
+    
+    @IBAction func onPlayBtnPressed(sender: UIButton!){
+    
+    }
 
 
 }

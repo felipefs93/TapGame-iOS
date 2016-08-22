@@ -34,6 +34,9 @@
                                     <constraint firstAttribute="width" constant="249" id="jKO-CH-41E"/>
                                 </constraints>
                                 <state key="normal" image="playbtn"/>
+                                <connections>
+                                    <action selector="onPlayBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Er2-UN-dwg"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Tn-Pa-H5g" userLabel="TapText">
                                 <rect key="frame" x="175" y="367" width="249" height="30"/>
