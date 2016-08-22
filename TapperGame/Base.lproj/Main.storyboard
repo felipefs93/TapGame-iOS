@@ -20,14 +20,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="retrobg" translatesAutoresizingMaskIntoConstraints="NO" id="S3k-JW-mZC">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-9f-APz">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-9f-APz" userLabel="Logo">
                                 <rect key="frame" x="115" y="60" width="371" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="Dxp-kb-VJS"/>
                                     <constraint firstAttribute="width" constant="371" id="fp5-ge-BRl"/>
                                 </constraints>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17x-ly-3kQ">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17x-ly-3kQ" userLabel="PlayBtn">
                                 <rect key="frame" x="175" y="415" width="249" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="3xH-BP-Gfo"/>
@@ -44,36 +44,38 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="4qb-Sc-uYZ">
-                                <rect key="frame" x="214" y="28" width="172" height="177"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5n-gg-Vde" userLabel="TapLbl">
+                                <rect key="frame" x="111" y="238" width="377" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="Xus-1t-0Jx"/>
-                                    <constraint firstAttribute="height" constant="177" id="ugJ-UJ-FPe"/>
-                                </constraints>
-                            </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5n-gg-Vde">
-                                <rect key="frame" x="111.5" y="238" width="377" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="2dR-iC-baJ"/>
-                                    <constraint firstAttribute="width" constant="377" id="rio-7j-zSw"/>
+                                    <constraint firstAttribute="width" constant="377" id="8Xj-X7-gNK"/>
+                                    <constraint firstAttribute="height" constant="55" id="JB9-OE-KsE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-VX-wEX" userLabel="CoinBtn">
+                                <rect key="frame" x="214" y="28" width="172" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="9MW-Ov-s3B"/>
+                                    <constraint firstAttribute="height" constant="177" id="Ij8-ke-PLU"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="coin"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4qb-Sc-uYZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Af-O6-ZQ0"/>
-                            <constraint firstItem="z5n-gg-Vde" firstAttribute="top" secondItem="4qb-Sc-uYZ" secondAttribute="bottom" constant="33" id="1TT-PT-QxX"/>
                             <constraint firstItem="17x-ly-3kQ" firstAttribute="top" secondItem="9Tn-Pa-H5g" secondAttribute="bottom" constant="18" id="479-O8-kIz"/>
-                            <constraint firstItem="z5n-gg-Vde" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mbd-O0-eey"/>
+                            <constraint firstItem="z5n-gg-Vde" firstAttribute="top" secondItem="Scy-VX-wEX" secondAttribute="bottom" constant="33" id="KGN-LW-eP9"/>
                             <constraint firstItem="17x-ly-3kQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TG0-qa-96e"/>
+                            <constraint firstItem="z5n-gg-Vde" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UXH-Du-VGZ"/>
                             <constraint firstItem="9Tn-Pa-H5g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dMf-Il-k4J"/>
+                            <constraint firstItem="Scy-VX-wEX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dth-1R-au6"/>
+                            <constraint firstItem="Scy-VX-wEX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fku-Eo-Kol"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="17x-ly-3kQ" secondAttribute="bottom" constant="65" id="ghv-DQ-D3R"/>
                             <constraint firstItem="LWe-9f-APz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pqU-ou-bzD"/>
                             <constraint firstItem="LWe-9f-APz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="tbB-DI-GjY"/>
-                            <constraint firstItem="4qb-Sc-uYZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="w52-wH-7vU"/>
+                            <constraint firstItem="Scy-VX-wEX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="xvg-I6-Tlt"/>
                         </constraints>
                     </view>
                 </viewController>
