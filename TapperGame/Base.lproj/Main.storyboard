@@ -20,14 +20,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="retrobg" translatesAutoresizingMaskIntoConstraints="NO" id="S3k-JW-mZC">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-9f-APz" userLabel="Logo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="LWe-9f-APz" userLabel="Logo">
                                 <rect key="frame" x="115" y="60" width="371" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="Dxp-kb-VJS"/>
                                     <constraint firstAttribute="width" constant="371" id="fp5-ge-BRl"/>
                                 </constraints>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17x-ly-3kQ" userLabel="PlayBtn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17x-ly-3kQ" userLabel="PlayBtn">
                                 <rect key="frame" x="175" y="415" width="249" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="3xH-BP-Gfo"/>
@@ -35,7 +35,7 @@
                                 </constraints>
                                 <state key="normal" image="playbtn"/>
                             </button>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Tn-Pa-H5g">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Tn-Pa-H5g" userLabel="TapText">
                                 <rect key="frame" x="175" y="367" width="249" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="249" id="KcT-H8-PSo"/>
@@ -54,7 +54,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-VX-wEX" userLabel="CoinBtn">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-VX-wEX" userLabel="CoinBtn">
                                 <rect key="frame" x="214" y="28" width="172" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="172" id="9MW-Ov-s3B"/>
@@ -78,6 +78,13 @@
                             <constraint firstItem="Scy-VX-wEX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="xvg-I6-Tlt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="howManyTapsTxt" destination="9Tn-Pa-H5g" id="0UM-aK-s0W"/>
+                        <outlet property="logoImg" destination="LWe-9f-APz" id="nam-NR-8ZZ"/>
+                        <outlet property="playBtn" destination="17x-ly-3kQ" id="2yQ-kd-IXR"/>
+                        <outlet property="tapBtn" destination="Scy-VX-wEX" id="PVK-Si-CSk"/>
+                        <outlet property="tapsLbl" destination="z5n-gg-Vde" id="Hhm-g4-AEE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
