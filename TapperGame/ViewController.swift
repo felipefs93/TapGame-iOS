@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var tapBtn: UIButton!
     @IBOutlet weak var tapsLbl: UILabel!
     
+    @IBAction func onCoinTapped(sender: UIButton!){
+        
+    }
+    
     @IBAction func onPlayBtnPressed(sender: UIButton!){
         
         if howManyTapsTxt.text != nil && howManyTapsTxt.text != ""{

@@ -64,6 +64,9 @@
                                     <constraint firstAttribute="height" constant="177" id="Ij8-ke-PLU"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="coin"/>
+                                <connections>
+                                    <action selector="onCoinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQw-x0-OZC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
