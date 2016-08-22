@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     //Properties
     var maxTaps: Int = 0
@@ -22,9 +22,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var tapBtn: UIButton!
     @IBOutlet weak var tapsLbl: UILabel!
     
+    override func viewDidLoad() {
+        howManyTapsTxt.delegate = self
+    }
+    
     @IBAction func onCoinTapped(sender: UIButton!){
         currentTaps = currentTaps + 1
-        tapsLbl.text = "\(currentTaps)"
+        updateTapsLbl()
         if(currentTaps == maxTaps){
             restartGame()
         }
@@ -44,7 +48,7 @@ class ViewController: UIViewController {
             maxTaps = Int(howManyTapsTxt.text!)!
             currentTaps = 0
             
-            tapsLbl.text = "\(currentTaps)"
+            updateTapsLbl()
         }
     }
     
@@ -58,6 +62,16 @@ class ViewController: UIViewController {
         
         tapBtn.hidden = true
         tapsLbl.hidden = true
+        
+    }
+    
+    func updateTapsLbl(){
+        tapsLbl.text = "\(currentTaps)"
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 
