@@ -63,6 +63,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func restartGame(){
         currentTaps = 0
         maxTaps = 0
+        howManyTapsTxt.text = ""
         
         logoImg.hidden = false
         playBtn.hidden = false
