@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func onCoinTapped(sender: UIButton!){
         currentTaps = currentTaps + 1
         updateTapsLbl()
-        if(currentTaps == maxTaps){
+        if isGameOver(){
             restartGame()
         }
     }
@@ -49,6 +49,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             currentTaps = 0
             
             updateTapsLbl()
+        }
+    }
+    
+    func isGameOver()->Bool{
+        if currentTaps >= maxTaps{
+            return true
+        } else{
+            return false
         }
     }
     
